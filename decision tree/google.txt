@@ -1,0 +1,35 @@
+You'll want to keep in mind though that a logistic regression model is searching for a single linear decision boundary in your feature space, whereas a decision tree is essentially partitioning your feature space into half-spaces using axis-aligned linear decision boundaries. The net effect is that you have a non-linear decision boundary, possibly more than one.Lastly, another thing to consider is that decision trees can automatically take into account interactions between variables, e.g. xy
+ if you have two independent features x
+ and y
+. With logistic regression, you'll have to manually add those interaction terms yourself.The main challenge of logistic regression is that it is difficult to correctly interpret the results. In this post I describe why decision trees are often superior to logistic regression, but I should stress that I am not saying they are necessarily statistically superior. All I am saying is that they are better because they are easier and safer to use.Linear Regression is used to predict continuous outputs where there is a linear relationship between the features of the dataset and the output variable. It is used for regression problems where you are trying to predict something with infinite possible answers such as the price of a house.
+
+Decision trees can be used for either classification or regression problems and are useful for complex datasets. They work by splitting the dataset, in a tree-like structure, into smaller and smaller subsets and then make predictions based on what subset a new example would fall into.Logistics Regression (LR) and Decision Tree (DT) both solve the Classification Problem, and both can be interpreted easily; however, both have pros and cons. Based on the nature of your data choose the appropriate algorithm.
+
+Of course, at the initial level, we apply both algorithms. Then, we choose which model gives the best result. But have you ever thought of why a particular model is performing best on your data?
+
+Let's look at some aspects of data.Logistic Regression assumes that the data is linearly (or curvy linearly) separable in space but Decision Trees are non-linear classifiers; they do not require data to be linearly separable.When you are sure that your data set divides into two separable parts, then use a Logistic Regression. If you're not sure, then go with a Decision Tree. A Decision Tree will take care of both.\
+
+
+
+
+The choice between logistic regression and decision trees for a classification problem depends on various factors, including the nature of the data, the complexity of the problem, interpretability requirements, and the size of the dataset. Let's look at the characteristics of each method to help you make an informed decision:
+
+1. Logistic Regression:
+
+Logistic regression is a linear model used for binary classification problems (though it can be extended to handle multi-class problems as well).
+It assumes a linear relationship between the features and the log-odds of the target class.
+Logistic regression is computationally efficient and can handle large datasets well.
+It provides probabilities as output, allowing you to assess the certainty of predictions.
+It is relatively simple to interpret, as the coefficients of the features indicate the direction and magnitude of their influence on the target.
+However, logistic regression may struggle to capture complex, nonlinear relationships between features and the target.
+2. Decision Trees:
+
+Decision trees are a non-linear model that can be used for both classification and regression tasks.
+They partition the feature space into regions and make predictions based on the majority class in each region.
+Decision trees can capture complex, non-linear relationships in the data.
+They are easy to interpret, as you can visualize the tree structure and understand the decision-making process.
+Decision trees can suffer from overfitting, especially when they are deep and complex. Techniques like pruning and using ensembles (Random Forests, Gradient Boosting) can help mitigate this.
+Which one to choose?
+
+For simple problems with relatively small datasets and linear relationships between features and the target, logistic regression might be sufficient. It is also a good choice if interpretability is crucial.
+For complex problems with non-linear relationships between features and the target, decision trees might be more suitable, especially when you can use ensemble methods like Random Forests or Gradient Boosting to improve accuracy and reduce overfitting.
